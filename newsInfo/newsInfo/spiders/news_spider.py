@@ -35,31 +35,3 @@ class newsInfoSpider(Spider):
 
         return items
 
-    #========================
-    #allowed_domains = ["search.sina.com.cn"]
-
-    # start_urls = ['http://search.sina.com.cn/?q=%C4%E1%B2%B4%B6%FB%B5%D8%D5%F0&c=news&from=channel']
-    # print '------------start---------'
-
-    # rules = [Rule(LinkExtractor(allow = [r'']),
-    #                 follow = True, callback = 'parse_item')]
-
-    # def parse_item(self, response):
-    #     items = []
-    #     print '============================='
-    #     sel = Selector(response)
-
-    #     news_list = sel.xpath("//div[@class='r-info r-info2']/h2")
-    #     for news in news_list:
-    #         item = NewsinfoItem()
-    #         item['title'] = news.xpath("./a/text()").extract()
-    #         item['detailLink'] = news.xpath("./a/@href").extract()
-    #         str_item = news.xpath("./span[@class='fgray_time']/text()").extract()
-    #         str1 = ''
-    #         str1 = str1.join(str_item)
-    #         item['newsFrom'] = str1[:-20]
-    #         item['publishTime'] = str1[-19:]
-    #         print '----ok-----', item
-    #         items.append(item)
-
-    #         return items
